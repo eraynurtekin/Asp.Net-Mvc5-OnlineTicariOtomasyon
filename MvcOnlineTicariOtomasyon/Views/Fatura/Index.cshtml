@@ -1,0 +1,75 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
+@model List<Faturalar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h3>Fatura Listesi</h3>
+<table class="table table-bordered" style="margin-top:20px">
+    <tr>
+            
+        <th>Seri Sıra No</th>
+        <th>Tarih</th>
+        <th>Saat</th> 
+        <th>Toplam</th>
+        <th>Güncelle</th>
+        <th>Teslim Detaylar</th>
+        
+        <th>Yeni Kalem</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    
+    <td>@item.FaturaSeriNo @item.FaturaSıraNo</td>
+   
+    <td>@item.Tarih</td>
+    <td>@item.Saat</td>
+    <td>@item.Toplam ₺</td>
+
+    <td><a href="/Fatura/FaturaGetir/@item.FaturaId" class="btn btn-success">Güncelle</a></td>
+    <td><a href="/Fatura/FaturaDetay/@item.FaturaId" class="btn btn-dark" style="background-color:gray; color:white;">Detaylar</a></td>
+   
+    <td><a href="/Fatura/FaturaDetay/@item.FaturaId" class="btn btn-dark" style="background-color:goldenrod; color:white;">Göster</a></td>
+</tr>
+    }
+
+</table>
+<a href="/Fatura/FaturaEkle" class="btn btn-primary">Fatura Ekle</a>
+<br />
+<br />
+<button type="botton" class="btn btn-primary" style="background-color:darkred" data-toggle="modal" data-target="#Modal1">Popup Penceresi</button>
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Popup Diyalog Ekranı</h3>
+            </div>
+           <div class="modal-body">
+               <table class="table table-bordered">
+                   <tr>
+                       <td>Seri No</td>
+                       <td>Sıra No</td>
+                       <td>Tutar</td>
+                   </tr>
+                   @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.FaturaSeriNo</td>
+                    <td>@item.FaturaSıraNo</td>
+                    <td>@item.Toplam</td>
+                </tr>
+            }
+
+               </table>
+               <button type="button" class="btn btn-danger" data-dismiss="modal">Tamam</button>
+               
+           </div>
+        </div>
+    </div>
+</div>
+
