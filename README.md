@@ -16,6 +16,12 @@ Admin panelinin dashboard kısmı ile hem tasarımı güçlü bir arayüz hem de
 -Cari işlemler,Ürün durumu, toplam satış gibi genel İstatistik bilgilerine Linq sorguları kullanılarak ulaşılabilmektedir.
 ![alt text](https://hizliresim.turkiyepanel.net/upload/162.158.233.5-istatistik.png)
 
+--Dinamik Fatura işlemleri ile kullanıcının rahatlıkla yeni fatura işlemi yapabilmesi sağlanmaktadır.
+![alt text](https://hizliresim.turkiyepanel.net/upload/172.69.182.153-Fatura1.png)
+
+--Fatura İşlemi Yeni Kayıt:
+![alt text](https://hizliresim.turkiyepanel.net/upload/172.69.182.207-Fatura2.png)
+
 -Pdf,excel,csv gibi ürün çıktıları rahatlıkla alınabilmekte ve gerekli filtrelemeler yapılabilmektedir.
 ![alt text](https://hizliresim.turkiyepanel.net/upload/141.101.68.163-pdf.png)
 
